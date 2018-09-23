@@ -1,0 +1,24 @@
+<launch>
+  <rosparam file="$(find opendog_control)/config/opendog_control.yaml" command="load"  />
+
+  <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false"
+	  output="screen" ns="opendog" args=" joint_state_controller 
+						lb_hip_position_controller 
+						lb_upperleg_position_controller
+						lb_lowerleg_position_controller
+						rb_hip_position_controller 
+						rb_upperleg_position_controller
+						rb_lowerleg_position_controller
+						lf_hip_position_controller 
+						lf_upperleg_position_controller
+						lf_lowerleg_position_controller
+						rf_hip_position_controller 
+						rf_upperleg_position_controller
+						rf_lowerleg_position_controller"/>
+
+ <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"      respawn="false" output="screen" >
+    <remap from="/joint_states" to="/opendog/joint_states" />
+ </node>
+
+</launch>
+

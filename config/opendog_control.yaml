@@ -1,0 +1,58 @@
+opendog:
+  # Publish all joint states ----------------------------------
+  joint_state_controller:
+     type:         joint_state_controller/JointStateController
+     publish_rate: 50
+
+  # Joint effort Controller -------------------------------
+  lb_hip_position_controller:
+     type: effort_controllers/JointPositionController
+     joint: lb_hip_joint
+     pid: {p: 500,  i: 20.0, d: 0.2 }
+  lb_upperleg_position_controller:
+     type: effort_controllers/JointPositionController
+     joint: lb_upperleg_joint
+     pid: {p: 500,  i: 20.0, d: 0.2 }
+  lb_lowerleg_position_controller:
+     type: effort_controllers/JointPositionController
+     joint: lb_lowerleg_joint
+     pid: {p: 500,  i: 20.0, d: 0.2 }
+  
+  rb_hip_position_controller:
+     type: effort_controllers/JointPositionController
+     joint: rb_hip_joint
+     pid: {p: 500,  i: 20.0, d: 0.2 }
+  rb_upperleg_position_controller:
+     type: effort_controllers/JointPositionController
+     joint: rb_upperleg_joint
+     pid: {p: 500,  i: 20.0, d: 0.2 }
+  rb_lowerleg_position_controller:
+     type: effort_controllers/JointPositionController
+     joint: rb_lowerleg_joint
+     pid: {p: 500,  i: 20.0, d: 0.2 }
+
+  lf_hip_position_controller:
+     type: effort_controllers/JointPositionController
+     joint: lf_hip_joint
+     pid: {p: 500,  i: 20.0, d: 0.2 }
+  lf_upperleg_position_controller:
+     type: effort_controllers/JointPositionController
+     joint: lf_upperleg_joint
+     pid: {p: 500,  i: 20.0, d: 0.2 }
+  lf_lowerleg_position_controller:
+     type: effort_controllers/JointPositionController
+     joint: lf_lowerleg_joint
+     pid: {p: 500,  i: 20.0, d: 0.2 }
+  
+  rf_hip_position_controller:
+     type: effort_controllers/JointPositionController
+     joint: rf_hip_joint
+     pid: {p: 500,  i: 20.0, d: 0.2 }
+  rf_upperleg_position_controller:
+     type: effort_controllers/JointPositionController
+     joint: rf_upperleg_joint
+     pid: {p: 500,  i: 20.0, d: 0.2 }
+  rf_lowerleg_position_controller:
+     type: effort_controllers/JointPositionController
+     joint: rf_lowerleg_joint
+     pid: {p: 500,  i: 20.0, d: 0.2 }
